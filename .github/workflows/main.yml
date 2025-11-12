@@ -3,12 +3,12 @@ name: ci
 on: [push]
 
 jobs:
-  build:
+  sast_scan:
     runs-on: ubuntu-latest
     
     steps:
-    - name: Setup the repository
-    - uses: actions/checkout@v4
+    - name: CheckOut the code
+      uses: actions/checkout@v4
     
     - name: Set up Python
       uses: actions/setup-python@v3
